@@ -80,23 +80,23 @@ export const Register = () => {
       sx={{
         height: "100%",
         width: "100%",
-        marginTop: "120px",
+        marginTop: { xs: "60px", sm: "80px", md: "120px" },
         display: "flex",
         justifyContent: "center",
-        marginBottom: "120px",
+        marginBottom: { xs: "60px", sm: "80px", md: "120px" },
       }}
     >
       <Box
         sx={{
           display: "flex",
           flexDirection: "column",
-          width: "454px",
+          width: { xs: "90%", sm: "400px", md: "454px" },
           alignItems: "center",
         }}
       >
         <Typography
           sx={{
-            fontSize: "45px",
+            fontSize: { xs: "30px", sm: "35px", md: "45px" },
             fontWeight: 800,
             color: "#0565bb",
             fontStretch: "normal",
@@ -112,7 +112,7 @@ export const Register = () => {
             width: "100%",
             height: "2px",
             background: "#222",
-            marginTop: "57px",
+            marginTop: { xs: "30px", sm: "40px", md: "57px" },
           }}
         />
 
@@ -282,7 +282,7 @@ export const Register = () => {
               />
             }
             label="이용약관 및 개인정보 처리 방침에 동의합니다. (필수)"
-            sx={{ marginBottom: "10px", color: "#333" }}
+            sx={{ marginBottom: "10px", color: "#333", fontSize: { xs: "12px", sm: "14px" } }}
           />
           {errors.termsAccepted && (
             <Typography color="error" variant="caption">
@@ -303,7 +303,7 @@ export const Register = () => {
               />
             }
             label="광고 및 메일 수신에 동의합니다. (선택)"
-            sx={{ color: "#333" }}
+            sx={{ color: "#333", fontSize: { xs: "12px", sm: "14px" } }}
           />
         </Box>
 
@@ -315,7 +315,7 @@ export const Register = () => {
             padding: "12px 0",
             backgroundColor: "#0565bb",
             color: "#fff",
-            fontSize: "16px",
+            fontSize: { xs: "14px", sm: "16px" },
             fontWeight: "bold",
             borderRadius: "0",
             "&:hover": {

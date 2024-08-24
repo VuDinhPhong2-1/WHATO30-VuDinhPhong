@@ -9,7 +9,7 @@ export const BrandStory = () => {
         background: "#0565bb",
         overflow: "hidden",
         boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
-        padding: "80px 100px",
+        padding: { xs: "40px 20px", sm: "60px 40px", md: "80px 100px" },
         justifyContent: "center",
         flexDirection: "column",
         alignItems: "center",
@@ -26,15 +26,21 @@ export const BrandStory = () => {
           textTransform: "uppercase",
           letterSpacing: "5px",
           width: "fit-content",
-          marginBottom: "40px",
-          marginTop: "40px",
+          marginBottom: { xs: "20px", sm: "30px", md: "40px" },
+          marginTop: { xs: "20px", sm: "30px", md: "40px" },
+          textAlign: "center", // Căn giữa văn bản
         }}
       >
         Brand Story
       </Typography>
       {/* Description */}
       <Typography
-        sx={{ color: "#fcd32a", width: "600px", textAlign: "center" }}
+        sx={{
+          color: "#fcd32a",
+          width: { xs: "100%", sm: "80%", md: "600px" },
+          textAlign: "center", // Căn giữa văn bản
+          marginBottom: { xs: "20px", sm: "30px", md: "40px" },
+        }}
       >
         모바일에 최적화된 비디오를 단 몇 분 만에 제작해보세요. 디자이너가
         아니더라도, 모든 팀에서 다듬을 수 있습니다. 브랜드의 성공을 위한 첫
@@ -46,8 +52,9 @@ export const BrandStory = () => {
           display: "flex",
           width: "100%",
           justifyContent: "center",
-          flexDirection: { sm: "column", xs: "column", md: "row" },
-          paddingTop: "70px",
+          flexDirection: { xs: "column", sm: "column", md: "row" },
+          paddingTop: { xs: "40px", sm: "50px", md: "70px" },
+          alignItems: "center",
         }}
       >
         <Box
@@ -58,6 +65,7 @@ export const BrandStory = () => {
             alignItems: "center",
             boxSizing: "border-box",
             zIndex: "100",
+            marginBottom: { xs: "20px", sm: "30px", md: "0" }, // Căn giữa hình ảnh khi ở kích thước nhỏ
           }}
         >
           <Box
@@ -76,22 +84,24 @@ export const BrandStory = () => {
           sx={{
             width: { xs: "100%", md: "50%", lg: "37%" },
             backgroundColor: "white",
-            padding: "32px",
+            padding: { xs: "20px", sm: "32px" },
             display: "flex",
             flexDirection: "column",
             justifyContent: "center",
-            alignItems: "flex-start",
+            alignItems: "center",
             color: "black",
             border: "4px solid",
             zIndex: "100",
+            textAlign: "center", // Căn giữa văn bản trong box này
           }}
         >
           <Typography
             gutterBottom
             sx={{
               fontWeight: "900",
-              marginBottom: { sm: "10px", md: "10px", lg: "20px", xl: "20px" },
-              fontSize: { xs: "10px", md: "15px", lg: "20px" },
+              marginBottom: { xs: "10px", sm: "15px", md: "20px" },
+              fontSize: { xs: "12px", sm: "15px", md: "20px" },
+              textAlign: "center", // Căn giữa văn bản
             }}
           >
             WHAT HAPPENED'S BRAND STORY
@@ -99,8 +109,9 @@ export const BrandStory = () => {
 
           <Typography
             sx={{
-              marginBottom: "20px",
-              fontSize: { xs: "8px", md: "10px", lg: "15px" },
+              marginBottom: { xs: "10px", sm: "15px", md: "20px" },
+              fontSize: { xs: "10px", sm: "12px", md: "15px" },
+              textAlign: "center", // Căn giữa văn bản
             }}
           >
             청춘이 있는 바이며, 말이다. 같지 노년에게서 어디 모래뿐일 무얼 풀이
@@ -113,49 +124,38 @@ export const BrandStory = () => {
           <Box
             sx={{
               display: "flex",
-              width: "100%",
-              justifyContent: {
-                xs: "center",
-                sm: "center",
-                md: "start",
-                lg: "start",
-              },
+              justifyContent: "center", // Căn giữa nút bấm
+              alignItems: "center",
+              padding: "10px 20px",
+              border: "4px solid black",
+              marginTop: { xs: "20px", sm: "25px", md: "30px" },
+              width: "199px",
+              height: "fit-content",
             }}
           >
-            <Box
+            <Button
               sx={{
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-                padding: "10px 20px",
-                border: "4px solid black",
-                marginTop: "30px",
-                width: "199px",
-                height: "fit-content",
+                textTransform: "none",
+                fontWeight: "bold",
+                fontSize: "16px",
+                color: "black",
+                backgroundColor: "transparent",
+                "&:hover": {
+                  backgroundColor: "rgba(0, 0, 0, 0.1)",
+                },
               }}
             >
-              <Button
-                sx={{
-                  textTransform: "none",
-                  fontWeight: "bold",
-                  fontSize: "16px",
-                  color: "black",
-                  backgroundColor: "transparent",
-                  "&:hover": {
-                    backgroundColor: "rgba(0, 0, 0, 0.1)",
-                  },
-                }}
-              >
-                See More
-              </Button>
-            </Box>
+              See More
+            </Button>
           </Box>
         </Box>
       </Box>
       {/* Img position */}
       <Box
         component={"img"}
-        src={"https://res.cloudinary.com/dk0lhapty/image/upload/v1724479026/62DF2781-ED3F-4251-950D-9D624288DA79_scz7mr.png"}
+        src={
+          "https://res.cloudinary.com/dk0lhapty/image/upload/v1724479026/62DF2781-ED3F-4251-950D-9D624288DA79_scz7mr.png"
+        }
         sx={{
           position: "absolute",
           top: { lg: "16px", md: "12px" },
@@ -168,7 +168,9 @@ export const BrandStory = () => {
       />
       <Box
         component={"img"}
-        src={"https://res.cloudinary.com/dk0lhapty/image/upload/v1724479029/98F1AA7B-19D3-49DD-B8C2-B79EEC9F62F8_u0aq5g.png"}
+        src={
+          "https://res.cloudinary.com/dk0lhapty/image/upload/v1724479029/98F1AA7B-19D3-49DD-B8C2-B79EEC9F62F8_u0aq5g.png"
+        }
         sx={{
           position: "absolute",
           top: { lg: "48px", md: "36px" },
@@ -181,7 +183,9 @@ export const BrandStory = () => {
       />
       <Box
         component={"img"}
-        src={"https://res.cloudinary.com/dk0lhapty/image/upload/v1724479034/CA35B39C-3D17-4386-B246-24E463C2D699_xkfj0n.png"}
+        src={
+          "https://res.cloudinary.com/dk0lhapty/image/upload/v1724479034/CA35B39C-3D17-4386-B246-24E463C2D699_xkfj0n.png"
+        }
         sx={{
           position: "absolute",
           top: { lg: "128px", md: "100px" },
@@ -194,7 +198,9 @@ export const BrandStory = () => {
       />
       <Box
         component={"img"}
-        src={"https://res.cloudinary.com/dk0lhapty/image/upload/v1724479029/75EC16CD-FEAF-417A-A6DD-F920767FC339_nmr37o.png"}
+        src={
+          "https://res.cloudinary.com/dk0lhapty/image/upload/v1724479029/75EC16CD-FEAF-417A-A6DD-F920767FC339_nmr37o.png"
+        }
         sx={{
           position: "absolute",
           top: { lg: "503px", md: "400px" },
@@ -207,7 +213,9 @@ export const BrandStory = () => {
       />
       <Box
         component={"img"}
-        src={"https://res.cloudinary.com/dk0lhapty/image/upload/v1724479033/A2652254-733C-4E77-9F8D-1962C03BB963_p73p32.png"}
+        src={
+          "https://res.cloudinary.com/dk0lhapty/image/upload/v1724479033/A2652254-733C-4E77-9F8D-1962C03BB963_p73p32.png"
+        }
         sx={{
           position: "absolute",
           top: { lg: "146px", md: "120px" },
@@ -220,7 +228,9 @@ export const BrandStory = () => {
       />
       <Box
         component={"img"}
-        src={"https://res.cloudinary.com/dk0lhapty/image/upload/v1724479033/C7C19B1C-C6B3-48F2-8950-319D982DD4E5_i4bsuy.png"}
+        src={
+          "https://res.cloudinary.com/dk0lhapty/image/upload/v1724479033/C7C19B1C-C6B3-48F2-8950-319D982DD4E5_i4bsuy.png"
+        }
         sx={{
           position: "absolute",
           top: { lg: "400px", md: "320px" },
@@ -233,7 +243,9 @@ export const BrandStory = () => {
       />
       <Box
         component={"img"}
-        src={"https://res.cloudinary.com/dk0lhapty/image/upload/v1724479024/04AF4237-E7D1-433C-B5F3-1AEFF370BA25_ya74zh.png"}
+        src={
+          "https://res.cloudinary.com/dk0lhapty/image/upload/v1724479024/04AF4237-E7D1-433C-B5F3-1AEFF370BA25_ya74zh.png"
+        }
         sx={{
           position: "absolute",
           top: { lg: "457px", md: "350px" },
