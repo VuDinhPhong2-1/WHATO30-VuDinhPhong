@@ -39,23 +39,23 @@ export const Login = () => {
       sx={{
         height: "100%",
         width: "100%",
-        marginTop: "120px",
+        marginTop: { xs: "60px", sm: "80px", md: "120px" },
         display: "flex",
         justifyContent: "center",
-        marginBottom: "120px",
+        marginBottom: { xs: "60px", sm: "80px", md: "120px" },
       }}
     >
       <Box
         sx={{
           display: "flex",
           flexDirection: "column",
-          width: "454px",
+          width: { xs: "90%", sm: "400px", md: "454px" },
           alignItems: "center",
         }}
       >
         <Typography
           sx={{
-            fontSize: "45px",
+            fontSize: { xs: "30px", sm: "35px", md: "45px" },
             fontWeight: 800,
             color: "#0565bb",
             fontStretch: "normal",
@@ -71,7 +71,7 @@ export const Login = () => {
             width: "100%",
             height: "2px",
             background: "#222",
-            marginTop: "57px",
+            marginTop: { xs: "30px", sm: "40px", md: "57px" },
           }}
         />
 
@@ -79,7 +79,7 @@ export const Login = () => {
           <TextField
             fullWidth
             variant="outlined"
-            label="Email Address" // email
+            label="Email Address"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             error={!!errors.email}
@@ -101,7 +101,7 @@ export const Login = () => {
           <TextField
             fullWidth
             variant="outlined"
-            label="Password" // password
+            label="Password"
             type="password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
@@ -121,7 +121,6 @@ export const Login = () => {
               },
             }}
           />
-          {/* Button login */}
           <Button
             fullWidth
             variant="contained"
@@ -129,7 +128,7 @@ export const Login = () => {
               backgroundColor: "#0565bb",
               color: "#fff",
               padding: "12px 0",
-              fontSize: "16px",
+              fontSize: { xs: "14px", md: "16px" },
               fontWeight: "bold",
               "&:hover ": {
                 backgroundColor: "#0565bb",
@@ -140,8 +139,13 @@ export const Login = () => {
             Log In
           </Button>
         </Box>
-        {/* Log in with your SNS account */}
-        <Typography sx={{ marginTop: "40px", fontSize: "14px", color: "#333" }}>
+        <Typography
+          sx={{
+            marginTop: "40px",
+            fontSize: { xs: "12px", sm: "13px", md: "14px" },
+            color: "#333",
+          }}
+        >
           Log in with your SNS account
         </Typography>
         <Box
@@ -157,7 +161,7 @@ export const Login = () => {
               component="img"
               src="https://res.cloudinary.com/dk0lhapty/image/upload/v1724479024/naver-icon_ylqxiu.png"
               alt="Naver"
-              sx={{ width: "66px", height: "66px" }}
+              sx={{ width: { xs: "50px", md: "66px" }, height: { xs: "50px", md: "66px" } }}
             />
           </Box>
           <Box sx={{ display: "flex", flex: 1, justifyContent: "center" }}>
@@ -165,7 +169,7 @@ export const Login = () => {
               component="img"
               src="https://res.cloudinary.com/dk0lhapty/image/upload/v1724479024/kakao-icon_mngc8u.png"
               alt="Kakao"
-              sx={{ width: "66px", height: "66px" }}
+              sx={{ width: { xs: "50px", md: "66px" }, height: { xs: "50px", md: "66px" } }}
             />
           </Box>
           <Box sx={{ display: "flex", flex: 1, justifyContent: "center" }}>
@@ -173,7 +177,7 @@ export const Login = () => {
               component="img"
               src="https://res.cloudinary.com/dk0lhapty/image/upload/v1724479023/facebook-icon_yv62b2.png"
               alt="Facebook"
-              sx={{ width: "66px", height: "66px" }}
+              sx={{ width: { xs: "50px", md: "66px" }, height: { xs: "50px", md: "66px" } }}
             />
           </Box>
           <Box sx={{ display: "flex", flex: 1, justifyContent: "end" }}>
@@ -181,17 +185,16 @@ export const Login = () => {
               component="img"
               src="https://res.cloudinary.com/dk0lhapty/image/upload/v1724479023/google-icon_mh0ljv.png"
               alt="Google"
-              sx={{ width: "66px", height: "66px" }}
+              sx={{ width: { xs: "50px", md: "66px" }, height: { xs: "50px", md: "66px" } }}
             />
           </Box>
         </Box>
-        {/* Button register */}
         <Button
           variant="outlined"
           sx={{
             marginTop: "30px",
             padding: "12px 0",
-            fontSize: "14px",
+            fontSize: { xs: "12px", sm: "13px", md: "14px" },
             fontWeight: "bold",
             color: "#333",
             borderColor: "#333",
@@ -216,13 +219,11 @@ export const Login = () => {
             gap: "15px",
             marginTop: "20px",
             width: "100%",
-            fontSize: "14px",
+            fontSize: { xs: "12px", sm: "13px", md: "14px" },
             color: "#0565bb",
           }}
         >
-          {/* Find ID (Email) */}
           <Typography>Find ID (Email)</Typography>
-          {/* find password */}
           <Typography>Find Password</Typography>
         </Box>
       </Box>
