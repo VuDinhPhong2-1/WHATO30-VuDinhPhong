@@ -16,7 +16,6 @@ export const BrandStory = () => {
         position: "relative",
       }}
     >
-      {/* Title */}
       <Typography
         variant="h4"
         sx={{
@@ -28,17 +27,16 @@ export const BrandStory = () => {
           width: "fit-content",
           marginBottom: { xs: "20px", sm: "30px", md: "40px" },
           marginTop: { xs: "20px", sm: "30px", md: "40px" },
-          textAlign: "center", // Căn giữa văn bản
+          textAlign: "center",
         }}
       >
         Brand Story
       </Typography>
-      {/* Description */}
       <Typography
         sx={{
           color: "#fcd32a",
           width: { xs: "100%", sm: "80%", md: "600px" },
-          textAlign: "center", // Căn giữa văn bản
+          textAlign: "center",
           marginBottom: { xs: "20px", sm: "30px", md: "40px" },
         }}
       >
@@ -46,7 +44,6 @@ export const BrandStory = () => {
         아니더라도, 모든 팀에서 다듬을 수 있습니다. 브랜드의 성공을 위한 첫
         걸음을 내딛어보세요. 비디오를 단 몇 분 만에 제작해보세요.
       </Typography>
-      {/* Img and What Happen */}
       <Box
         sx={{
           display: "flex",
@@ -54,7 +51,7 @@ export const BrandStory = () => {
           justifyContent: "center",
           flexDirection: { xs: "column", sm: "column", md: "row" },
           paddingTop: { xs: "40px", sm: "50px", md: "70px" },
-          alignItems: "center",
+          alignItems: "stretch",
         }}
       >
         <Box
@@ -65,7 +62,7 @@ export const BrandStory = () => {
             alignItems: "center",
             boxSizing: "border-box",
             zIndex: "100",
-            marginBottom: { xs: "20px", sm: "30px", md: "0" }, // Căn giữa hình ảnh khi ở kích thước nhỏ
+            marginBottom: { xs: "20px", sm: "30px", md: "0" },
           }}
         >
           <Box
@@ -84,24 +81,22 @@ export const BrandStory = () => {
           sx={{
             width: { xs: "100%", md: "50%", lg: "37%" },
             backgroundColor: "white",
-            padding: { xs: "20px", sm: "32px" },
             display: "flex",
             flexDirection: "column",
-            justifyContent: "center",
-            alignItems: "center",
+            alignItems: "start",
             color: "black",
             border: "4px solid",
             zIndex: "100",
-            textAlign: "center", // Căn giữa văn bản trong box này
           }}
         >
           <Typography
-            gutterBottom
             sx={{
               fontWeight: "900",
               marginBottom: { xs: "10px", sm: "15px", md: "20px" },
               fontSize: { xs: "12px", sm: "15px", md: "20px" },
-              textAlign: "center", // Căn giữa văn bản
+              textAlign: "center",
+              marginTop: "20px",
+              marginLeft: "10px",
             }}
           >
             WHAT HAPPENED'S BRAND STORY
@@ -111,7 +106,8 @@ export const BrandStory = () => {
             sx={{
               marginBottom: { xs: "10px", sm: "15px", md: "20px" },
               fontSize: { xs: "10px", sm: "12px", md: "15px" },
-              textAlign: "center", // Căn giữa văn bản
+              textAlign: "start",
+              marginLeft: "10px",
             }}
           >
             청춘이 있는 바이며, 말이다. 같지 노년에게서 어디 모래뿐일 무얼 풀이
@@ -124,13 +120,15 @@ export const BrandStory = () => {
           <Box
             sx={{
               display: "flex",
-              justifyContent: "center", // Căn giữa nút bấm
+              justifyContent: "center",
               alignItems: "center",
               padding: "10px 20px",
               border: "4px solid black",
               marginTop: { xs: "20px", sm: "25px", md: "30px" },
               width: "199px",
               height: "fit-content",
+              marginLeft: "10px",
+              marginBottom: "20px",
             }}
           >
             <Button
@@ -150,7 +148,6 @@ export const BrandStory = () => {
           </Box>
         </Box>
       </Box>
-      {/* Img position */}
       <Box
         component={"img"}
         src={
